@@ -41,7 +41,7 @@ Bem-vindo ao Sistema Inteligente de Gestão de Filas para o Hospital das Clínic
 
 2. **Código do Arduino**:
    ```cpp
-   #include <WiFiEsp.h>
+   #include <WiFi.h>
    #include <PubSubClient.h>
 
    // Pinos do sensor HC-SR04
