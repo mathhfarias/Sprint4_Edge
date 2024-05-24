@@ -37,7 +37,7 @@ Bem-vindo ao Sistema Inteligente de Gestão de Filas para o Hospital das Clínic
 ### Configuração de Software
 
 1. **Arduino IDE**:
-   - Instale as bibliotecas `WiFiEsp` e `PubSubClient`.
+   - Instale as bibliotecas `WiFi` e `PubSubClient`.
 
 2. **Código do Arduino**:
    ```cpp
