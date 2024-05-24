@@ -158,6 +158,12 @@ Bem-vindo ao Sistema Inteligente de Gestão de Filas para o Hospital das Clínic
    - Adicione widgets para visualizar os dados de distância em tempo real.
    - Configure esquemas de cores para diferentes intervalos de valores.
 
+👥 **Colaboradores Sob Solution**
+   - Matheus Farias de Lima - RM554254
+   - Miguel Mauricio Parrado Patarroyo - RM554007
+   - Vitor Pinheiro Nascimento - RM553693
+   - Pedro Henrique Chaves - RM553988   
+
 ## 🤝 Contribuições
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e enviar pull requests.
