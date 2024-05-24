@@ -1,0 +1,146 @@
+[
+    {
+        "id": "a2c5846219103def",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "db2630111cd19d06",
+        "type": "serial in",
+        "z": "a2c5846219103def",
+        "name": "Arduino Uno",
+        "serial": "f7c71a2c4a265919",
+        "x": 450,
+        "y": 260,
+        "wires": [
+            [
+                "3df5b92f09b264e6"
+            ]
+        ]
+    },
+    {
+        "id": "3df5b92f09b264e6",
+        "type": "json",
+        "z": "a2c5846219103def",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 690,
+        "y": 260,
+        "wires": [
+            [
+                "b5be42feb24d6969"
+            ]
+        ]
+    },
+    {
+        "id": "dc137d468a1adf1b",
+        "type": "mqtt out",
+        "z": "a2c5846219103def",
+        "name": "Broker Tago",
+        "topic": "tago/data/post",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f938e7eed74c5dd2",
+        "x": 1250,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "b5be42feb24d6969",
+        "type": "function",
+        "z": "a2c5846219103def",
+        "name": "function 1",
+        "func": "var currentDate = new Date();\n \nvar B = {\n    payload: {\n        \"variable\": \"Distancia\",\n        \"value\":msg.payload,\n        \"location\":{\"lat\":-23.57314101879612, \"lng\": -46.62305573863933 }\n    }\n};\n \nreturn B;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 340,
+        "wires": [
+            [
+                "dc137d468a1adf1b",
+                "5499c795d6b7c612"
+            ]
+        ]
+    },
+    {
+        "id": "5499c795d6b7c612",
+        "type": "debug",
+        "z": "a2c5846219103def",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1240,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "f7c71a2c4a265919",
+        "type": "serial-port",
+        "name": "COM3",
+        "serialport": "COM3",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "f938e7eed74c5dd2",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mqtt.tago.io",
+        "port": "1883",
+        "clientid": "Matheus Farias",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    }
+]
